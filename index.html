@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Barocco Wholesale – My Account</title>
+<link rel="icon" href="invoice-logo.png">
+<style>
+:root{--ink:#111111;--gold:#B4934C;--pale:#F5F0E5;--gray:#F4F4F2;--line:#e7e2d6;--red:#b3261e;--green:#2e7d32}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--gray);color:var(--ink);font-size:15px;line-height:1.4}
+.rail{height:6px;background:var(--ink)}
+header.top{background:var(--ink);border-bottom:4px solid var(--gold);padding:14px 16px;display:flex;align-items:center;gap:12px}
+header.top img{height:38px;width:auto;background:#fff;border-radius:6px;padding:2px 4px}
+.brand{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:16px;text-transform:uppercase}
+.brandsub{color:#cfc7b3;font-size:11px;margin-top:2px}
+nav.tabs{position:sticky;top:0;z-index:5;display:flex;background:#fff;border-bottom:1px solid var(--line)}
+nav.tabs button{flex:1;padding:14px 4px;border:0;background:#fff;font:inherit;font-weight:700;font-size:13px;letter-spacing:.3px;color:#777;border-bottom:3px solid transparent;cursor:pointer}
+nav.tabs button.on{color:var(--ink);border-bottom-color:var(--gold)}
+main{max-width:760px;margin:0 auto;padding:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:16px;overflow:hidden}
+.card h2{margin:0;padding:14px 16px;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #eee;background:var(--pale)}
+.card .body{padding:16px}
+.big{font-size:30px;font-weight:700;font-variant-numeric:tabular-nums}
+.muted{color:#777;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:var(--gray);border-radius:8px;padding:10px 12px}
+.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#888}
+.kpi .v{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi.warn .v{color:var(--red)}
+.btn{display:inline-block;padding:12px 16px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:#fff;font:inherit;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;text-align:center}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#111}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.small{padding:7px 10px;font-size:12px}
+.btn.block{display:block;width:100%}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.3px;color:#fff;background:var(--ink);padding:8px 6px;white-space:nowrap}
+td{padding:9px 6px;border-bottom:1px solid #f0f0ee;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:700}
+.pill.late{background:#fde8e6;color:var(--red)}.pill.ok{background:#e7f3e8;color:var(--green)}.pill.fact{background:var(--pale);color:#7a6024}
+.notice{background:var(--pale);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:13px;margin:12px 0}
+.err{color:var(--red)}
+input.amt,input.code{font-size:20px;padding:12px;width:100%;border:1px solid #ccc;border-radius:8px;font-variant-numeric:tabular-nums}
+label{display:block;font-size:12px;color:#666;margin:12px 0 6px}
+.center{text-align:center}
+.sizegrid{display:inline-flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.sizecell{border:1px solid #ddd;border-radius:4px;padding:1px 6px;font-size:11px;color:#555}
+footer{max-width:760px;margin:0 auto;padding:8px 16px 40px;color:#888;font-size:11px;text-align:center}
+.hide{display:none!important}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-top:10px}
+/* statement document */
+#stmt{background:#fff;border:1px solid var(--line);border-radius:10px;padding:0;overflow:hidden}
+#stmt .sh{background:var(--ink);border-bottom:4px solid var(--gold);color:var(--gold);padding:14px 18px}
+#stmt .sb{padding:16px 18px}
+@media (max-width:560px){th,td{padding:8px 4px}.hide-s{display:none}.big{font-size:26px}}
+@page{size:Letter;margin:32pt}
+@media print{
+  body{background:#fff}
+  .screen-only,nav.tabs,header.top,footer{display:none!important}
+  body.stmt-mode main>section:not(#statementView){display:none!important}
+  #stmt{border:0}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="rail screen-only"></div>
+<header class="top screen-only">
+  <img src="invoice-logo.png" alt="Barocco">
+  <div><div class="brand">Barocco Wholesale</div><div class="brandsub">Pandora International LLC dba Barocco &middot; 1326 Santee Street, Los Angeles, CA 90015</div></div>
+</header>
+<nav class="tabs hide screen-only" id="tabs">
+  <button data-t="pay">Pay</button>
+  <button data-t="card">Card on file</button>
+  <button data-t="account">My account</button>
+</nav>
+<main id="main"><div class="card"><div class="body">Loading&hellip;</div></div></main>
+<footer class="screen-only">Secure payments by Authorize.Net. Barocco never stores your card details. Questions? Call your Barocco representative or email wholesale@barocco.com.</footer>
+
+<script>
+(function () {
+'use strict';
+var SB = 'https://orvurxgjmsxgtbxdzllo.supabase.co';
+var KEY = 'sb_publishable_dZWdklNaAVzbib41G0WZRQ_m0hRyEEh';
+var PAY_FN = SB + '/functions/v1/pay';
+var qs = new URLSearchParams(location.search);
+var TOKEN = qs.get('a') || '';
+var SESSION = '';
+try { SESSION = sessionStorage.getItem('bw_s_' + TOKEN.slice(0, 12)) || ''; } catch (e) {}
+var main = document.getElementById('main');
+var tabsEl = document.getElementById('tabs');
+var DATA = null, OPEN = null, currentTab = '';
+
+function esc(s) { var d = document.createElement('div'); d.textContent = (s === null || s === undefined) ? '' : String(s); return d.innerHTML; }
+var fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+function money(n) { return fmt.format(Number(n) || 0); }
+function dt(s) { if (!s) return ''; var m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})/); return m ? m[2] + '/' + m[3] + '/' + m[1] : String(s); }
+
+function rpc(fn, body) {
+  return fetch(SB + '/rest/v1/rpc/' + fn, {
+    method: 'POST',
+    headers: { 'apikey': KEY, 'Content-Type': 'application/json', 'Content-Profile': 'account_api' },
+    body: JSON.stringify(body || {})
+  }).then(function (r) { return r.json(); });
+}
+function setMain(html) { main.innerHTML = html; window.scrollTo(0, 0); }
+function card(title, body) { return '<div class="card">' + (title ? '<h2>' + esc(title) + '</h2>' : '') + '<div class="body">' + body + '</div></div>'; }
+function msg(title, text) { tabsEl.classList.add('hide'); setMain(card('', '<h3 style="margin:0 0 8px">' + esc(title) + '</h3><p>' + text + '</p>')); }
+
+/* ---------- start ---------- */
+function start() {
+  if (!TOKEN) { msg('This link is not complete', 'Please use the secure link from your Barocco email or message, or contact your representative.'); return; }
+  rpc('open', { p_token: TOKEN, p_session: SESSION || null }).then(function (o) {
+    OPEN = o;
+    if (!o || o.status === 'invalid') { msg('We could not open this link', 'Please ask your Barocco representative for a new secure link.'); return; }
+    if (o.status === 'expired') { msg('This link has expired', 'For your security links expire after 90 days. Please contact your Barocco representative or email wholesale@barocco.com for a new one.'); return; }
+    if (o.status === 'revoked') { msg('This link is no longer active', 'Please contact your Barocco representative or email wholesale@barocco.com.'); return; }
+    if (o.status === 'needs_code') { codeScreen(); return; }
+    load();
+  }).catch(function () { msg('Something went wrong', 'Please try again in a moment.'); });
+}
+
+function codeScreen(note) {
+  tabsEl.classList.add('hide');
+  setMain(card('Verify it is you',
+    '<p>For your security we will email a 6-digit code to <b>' + esc(OPEN.email_hint || 'the email on your account') + '</b>.</p>' +
+    (note ? '<p class="err">' + esc(note) + '</p>' : '') +
+    '<button class="btn gold block" id="sendCode">Email me a code</button>' +
+    '<label for="code">Enter the code</label><input id="code" class="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="000000">' +
+    '<button class="btn block" id="verify" style="margin-top:12px">Continue</button>'));
+  document.getElementById('sendCode').onclick = function () {
+    var b = this; b.disabled = true;
+    rpc('request_code', { p_token: TOKEN }).then(function (r) {
+      b.disabled = false;
+      if (r.status === 'sent') b.textContent = 'Code sent. Send again';
+      else if (r.status === 'too_many') codeScreen('Too many codes requested. Please try again in an hour.');
+      else if (r.status === 'no_email') codeScreen('There is no email on file. Please contact your representative.');
+      else codeScreen('Could not send a code.');
+    });
+  };
+  document.getElementById('verify').onclick = function () {
+    var c = document.getElementById('code').value.trim();
+    if (c.length < 6) return;
+    rpc('verify_code', { p_token: TOKEN, p_code: c }).then(function (r) {
+      if (r.status === 'ok') { SESSION = r.session; try { sessionStorage.setItem('bw_s_' + TOKEN.slice(0, 12), SESSION); } catch (e) {} load(); }
+      else if (r.status === 'wrong_code') codeScreen('That code is not right. ' + (r.attempts_left || 0) + ' tries left.');
+      else if (r.status === 'too_many') codeScreen('Too many tries. Please request a new code.');
+      else codeScreen('That code has expired. Please request a new one.');
+    });
+  };
+}
+
+function load() {
+  rpc('data', { p_token: TOKEN, p_session: SESSION || null }).then(function (d) {
+    if (d.status === 'needs_code') { codeScreen(); return; }
+    if (d.status !== 'ok') { msg('We could not load your account', 'Please try again, or contact your representative.'); return; }
+    DATA = d; tabsEl.classList.remove('hide');
+    var h = (location.hash || '').replace('#', '');
+    show(h === 'card' || h === 'account' || h === 'statement' ? h : 'pay');
+  }).catch(function () { msg('Something went wrong', 'Please try again in a moment.'); });
+}
+
+tabsEl.addEventListener('click', function (e) { var t = e.target && e.target.getAttribute('data-t'); if (t) show(t); });
+
+function show(t) {
+  document.body.classList.remove('stmt-mode');
+  currentTab = t;
+  var btns = tabsEl.querySelectorAll('button');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('on', btns[i].getAttribute('data-t') === (t === 'statement' ? 'account' : t));
+  try { history.replaceState(null, '', location.pathname + location.search + '#' + t); } catch (e) {}
+  if (t === 'pay') return payTab();
+  if (t === 'card') return cardTab();
+  if (t === 'statement') return statementView();
+  return accountTab();
+}
+
+/* ---------- Pay ---------- */
+function payTab() {
+  var s = DATA.summary, inv = DATA.invoices.filter(function (i) { return !i.is_factored; }), fact = DATA.invoices.filter(function (i) { return i.is_factored; });
+  var payable = inv.reduce(function (a, i) { return a + Number(i.balance_due || 0); }, 0);
+  var h = card('Hello, ' + (DATA.customer.name || ''), '<div class="muted">Open balance you can pay online</div><div class="big">' + money(payable) + '</div>' +
+    (s.past_due > 0 ? '<div class="pill late" style="margin-top:6px">Past due on account: ' + money(s.past_due) + '</div>' : '') +
+    (payable > 0 ? '<button class="btn gold block" id="payAll" style="margin-top:14px">Pay account balance</button>' : '<p>Nothing is due online right now. Thank you!</p>'));
+  if (inv.length) {
+    h += card('Or pay one invoice', '<div class="scroll"><table><thead><tr><th>Invoice</th><th class="hide-s">Due</th><th class="n">Balance</th><th></th></tr></thead><tbody>' +
+      inv.map(function (i) { return '<tr><td><b>' + esc(i.invoice_number) + '</b><br><span class="muted">' + dt(i.invoice_date) + '</span></td><td class="hide-s">' + dt(i.due_date) + (i.days_past_due > 0 ? '<br><span class="pill late">' + i.days_past_due + ' days late</span>' : '') + '</td><td class="n">' + money(i.balance_due) + '</td><td class="n"><button class="btn small" data-pay="' + esc(i.invoice_number) + '">Pay</button></td></tr>'; }).join('') + '</tbody></table></div>');
+  }
+  if (fact.length) h += card('Invoices paid to our factor', factorBlock(fact) );
+  setMain(h);
+  var pa = document.getElementById('payAll'); if (pa) pa.onclick = function () { this.disabled = true; startStatementPay(); };
+  main.querySelectorAll('[data-pay]').forEach(function (b) { b.onclick = function () { b.disabled = true; startInvoicePay(b.getAttribute('data-pay'), b); }; });
+}
+function factorBlock(fact) {
+  var seen = {}, out = '<p>These invoices were assigned to our factor. <b>Please do not pay Barocco directly for them.</b> They cannot be paid by card here.</p>';
+  fact.forEach(function (i) { var k = i.remit && i.remit.payee; if (k && !seen[k]) { seen[k] = 1; out += '<div class="notice"><b>' + esc(i.remit.payee) + '</b><br>' + esc(i.remit.heading || '') + '<br>' + (i.remit.lines || []).map(esc).join('<br>') + '</div>'; } });
+  out += '<div class="muted">' + fact.length + ' invoice(s), total ' + money(fact.reduce(function (a, i) { return a + Number(i.balance_due || 0); }, 0)) + '</div>';
+  return out;
+}
+function startStatementPay() {
+  rpc('pay_token', { p_token: TOKEN, p_session: SESSION || null, p_purpose: 'pay_statement' }).then(function (r) {
+    if (r.status === 'ok') payFlow(r.pay_token); else { setMain(card('', 'Nothing is due online right now. Thank you!')); }
+  });
+}
+function startInvoicePay(inv, btn) {
+  rpc('invoice_links', { p_token: TOKEN, p_session: SESSION || null, p_invoice: inv }).then(function (r) {
+    if (r.status === 'ok' && r.pay_token) payFlow(r.pay_token);
+    else { if (btn) btn.disabled = false; alert('This invoice cannot be paid online. Please contact your representative.'); }
+  });
+}
+// Same JSON conversation the original pay page has with the `pay` function.
+function payFlow(payToken) {
+  setMain(card('', 'Loading&hellip;'));
+  fetch(PAY_FN + '?t=' + encodeURIComponent(payToken), { headers: { 'Accept': 'application/json' } })
+    .then(function (r) { return r.json(); })
+    .then(function (d) { handlePay(d, payToken); })
+    .catch(function () { setMain(card('', '<span class="err">Something went wrong. Please try again.</span>')); });
+}
+function handlePay(d, payToken) {
+  if (d.error) { setMain(card('', '<span class="err">' + esc(typeof d.error === 'string' ? d.error : 'Something went wrong') + '</span><p><button class="btn ghost" id="back">Back</button></p>')); document.getElementById('back').onclick = function () { show('pay'); }; return; }
+  if (d.status === 'redirect') return redirect(d.action, d.token);
+  if (d.status === 'paid') { setMain(card('Invoice ' + esc(d.invoiceNumber) + ' is paid in full', '<p>Thank you! Nothing more is due on this invoice.</p>')); return; }
+  if (d.status === 'amount_form') return amountForm(d, payToken);
+  setMain(card('', 'Unexpected response.'));
+}
+function amountForm(d, payToken) {
+  var lines = (d.lines || []).map(function (l) {
+    var sg = (l.sizeGrid || []).map(function (s) { return '<span class="sizecell">' + esc(s.size) + ':' + esc(s.qty) + '</span>'; }).join('');
+    return '<tr><td><b>' + esc(l.style || '') + '</b><br><span class="muted">' + esc(l.styleDescription || '') + '</span></td><td>' + esc(l.colorDescription || l.color || '') + '</td><td>' + esc(l.qty || 0) + (sg ? '<div class="sizegrid">' + sg + '</div>' : '') + '</td><td class="n">' + money(l.price) + '</td></tr>';
+  }).join('');
+  var bal = Number(d.balance) || 0;
+  setMain(card((d.kind === 'statement' ? 'Account balance' : 'Invoice ' + esc(d.invoiceNumber)),
+    (d.customerName ? '<div class="muted">' + esc(d.customerName) + '</div>' : '') +
+    (d.amountPaid > 0 && d.originalAmount ? '<div class="row"><span class="muted">Invoice total</span><span>' + money(d.originalAmount) + '</span></div><div class="row"><span class="muted">Paid so far</span><span>' + money(d.amountPaid) + '</span></div>' : '') +
+    '<div class="row"><span class="muted">' + (d.amountPaid > 0 ? 'Remaining balance' : 'Balance due') + '</span><span class="big">' + money(bal) + '</span></div>' +
+    (d.dueDate ? '<div class="row"><span class="muted">Due date</span><span>' + esc(dt(d.dueDate)) + '</span></div>' : '') +
+    (d.viewUrl ? '<p><a class="btn ghost block" href="' + esc(d.viewUrl) + '" target="_blank" rel="noopener">View / print invoice (PDF)</a></p>' : '') +
+    (lines ? '<div class="scroll"><table><thead><tr><th>Style</th><th>Color</th><th>Qty / Sizes</th><th class="n">Price</th></tr></thead><tbody>' + lines + '</tbody></table></div>' : '') +
+    '<label for="amt">Amount to pay (USD)</label><input id="amt" class="amt" type="number" step="0.01" min="0.01" max="' + bal + '" value="' + bal.toFixed(2) + '">' +
+    '<button class="btn gold block" id="go" style="margin-top:14px">&#128274; Continue to secure payment</button>' +
+    '<p><button class="btn ghost block" id="cancel">Cancel</button></p>' +
+    '<p class="muted center">Secured by Authorize.Net. Barocco never stores your card details.</p>'));
+  document.getElementById('cancel').onclick = function () { show('pay'); };
+  document.getElementById('go').onclick = function () {
+    var a = parseFloat(document.getElementById('amt').value);
+    if (!a || a <= 0) { alert('Enter a valid amount'); return; }
+    this.disabled = true;
+    fetch(PAY_FN + '?t=' + encodeURIComponent(payToken), { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: a }) })
+      .then(function (r) { return r.json(); }).then(function (x) { handlePay(x, payToken); })
+      .catch(function () { setMain(card('', '<span class="err">Something went wrong. Please try again.</span>')); });
+  };
+}
+function redirect(action, token) {
+  setMain(card('Redirecting to secure payment&hellip;', '<p>Please wait, do not close this window.</p>'));
+  var f = document.createElement('form'); f.method = 'post'; f.action = action;
+  var i = document.createElement('input'); i.type = 'hidden'; i.name = 'token'; i.value = token; f.appendChild(i);
+  document.body.appendChild(f); f.submit();
+}
+
+/* ---------- Card on file ---------- */
+function cardTab() {
+  setMain(card('Card on file', '<p>Save a card so Barocco can charge it for your invoices when you approve. Your card is entered on Authorize.Net\'s secure page. Barocco never sees or stores the card number.</p><button class="btn gold block" id="addCard">&#128274; Add or update a card</button>'));
+  document.getElementById('addCard').onclick = function () {
+    this.disabled = true;
+    rpc('pay_token', { p_token: TOKEN, p_session: SESSION || null, p_purpose: 'save_card' }).then(function (r) {
+      if (r.status === 'ok') payFlow(r.pay_token); else setMain(card('', '<span class="err">Could not open the secure form. Please try again.</span>'));
+    });
+  };
+}
+
+/* ---------- My account ---------- */
+function accountTab() {
+  var s = DATA.summary, a = s.aging || {};
+  var h = card('Account summary', '<div class="muted">' + esc(DATA.customer.name) + ' &middot; ' + esc(DATA.customer.code) + (DATA.customer.terms ? ' &middot; Terms ' + esc(DATA.customer.terms) : '') + '</div>' +
+    '<div class="grid" style="margin-top:10px">' +
+    '<div class="kpi"><div class="l">Open balance</div><div class="v">' + money(s.open_balance) + '</div></div>' +
+    '<div class="kpi' + (s.past_due > 0 ? ' warn' : '') + '"><div class="l">Past due</div><div class="v">' + money(s.past_due) + '</div></div>' +
+    '<div class="kpi"><div class="l">Credit on account</div><div class="v">' + money(s.credit_on_account) + '</div></div>' +
+    (s.checks_in_process > 0 ? '<div class="kpi"><div class="l">Checks in process</div><div class="v">' + money(s.checks_in_process) + '</div></div>' : '') + '</div>' +
+    '<div class="grid" style="margin-top:10px"><div class="kpi"><div class="l">Not due</div><div class="v">' + money(a.not_due) + '</div></div><div class="kpi"><div class="l">1-30 late</div><div class="v">' + money(a.d1_30) + '</div></div><div class="kpi"><div class="l">31-60</div><div class="v">' + money(a.d31_60) + '</div></div><div class="kpi"><div class="l">61-90</div><div class="v">' + money(a.d61_90) + '</div></div><div class="kpi"><div class="l">90+</div><div class="v">' + money(a.d90_plus) + '</div></div></div>' +
+    '<p style="margin-top:14px"><button class="btn block" id="stmtBtn">Statement (print or save as PDF)</button></p><div class="muted center">As of ' + dt(String(DATA.as_of).slice(0, 10)) + '</div>');
+  h += card('Open invoices (' + DATA.invoices.length + ')', DATA.invoices.length ? '<div class="scroll"><table><thead><tr><th>Invoice</th><th class="hide-s">Date</th><th>Due</th><th class="n hide-s">Amount</th><th class="n hide-s">Paid</th><th class="n">Balance</th><th></th></tr></thead><tbody>' +
+    DATA.invoices.map(function (i) {
+      return '<tr><td><b>' + esc(i.invoice_number) + '</b>' + (i.customer_po ? '<br><span class="muted">PO ' + esc(i.customer_po) + '</span>' : '') + (i.is_factored ? '<br><span class="pill fact">Pay to factor</span>' : '') + '</td><td class="hide-s">' + dt(i.invoice_date) + '</td><td>' + dt(i.due_date) + (i.days_past_due > 0 ? '<br><span class="pill late">' + i.days_past_due + ' days</span>' : '') + '</td><td class="n hide-s">' + money(i.original_amount) + '</td><td class="n hide-s">' + money(i.amount_paid) + '</td><td class="n"><b>' + money(i.balance_due) + '</b></td><td class="n" style="white-space:nowrap"><button class="btn small ghost" data-pdf="' + esc(i.invoice_number) + '">PDF</button> ' + (i.is_factored ? '' : '<button class="btn small" data-pay="' + esc(i.invoice_number) + '">Pay</button>') + '</td></tr>';
+    }).join('') + '</tbody></table></div>' + (DATA.invoices.some(function (i) { return i.is_factored; }) ? '<div style="margin-top:12px">' + factorBlock(DATA.invoices.filter(function (i) { return i.is_factored; })) + '</div>' : '') +
+    '<p class="muted">' + esc(DATA.remit_house) + '</p>' : '<p>You have no open invoices. Thank you!</p>');
+  h += card('Payments', DATA.payments.length ? '<div class="scroll"><table><thead><tr><th>Date</th><th>Method</th><th class="hide-s">Reference</th><th>Applied to</th><th class="n">Amount</th></tr></thead><tbody>' + DATA.payments.map(function (p) { return '<tr><td>' + dt(p.date) + '</td><td>' + esc(p.method || '') + '</td><td class="hide-s">' + esc(p.reference || '') + '</td><td>' + esc(p.applied_to || '') + '</td><td class="n">' + money(p.amount) + '</td></tr>'; }).join('') + '</tbody></table></div>' +
+    (DATA.checks_in_process.length ? '<p class="muted">Checks received and being processed: ' + DATA.checks_in_process.map(function (k) { return esc(k.check_number || 'check') + ' ' + money(k.amount); }).join(', ') + '</p>' : '') : '<p>No payments to show yet.</p>');
+  h += card('Credits and credit memos', '<p>Credit on account: <b>' + money(s.credit_on_account) + '</b></p>' + (DATA.credit_memos.length ? '<div class="scroll"><table><thead><tr><th>Memo</th><th>Date</th><th>Invoice</th><th class="n">Amount</th></tr></thead><tbody>' + DATA.credit_memos.map(function (m) { return '<tr><td>' + esc(m.number) + '<br><span class="muted">' + esc(m.reason || '') + '</span></td><td>' + dt(m.date) + '</td><td>' + esc(m.invoice || '') + '</td><td class="n">' + money(m.amount) + '</td></tr>'; }).join('') + '</tbody></table></div>' : '<p class="muted">No credit memos.</p>'));
+  setMain(h);
+  document.getElementById('stmtBtn').onclick = function () { show('statement'); };
+  main.querySelectorAll('[data-pay]').forEach(function (b) { b.onclick = function () { b.disabled = true; startInvoicePay(b.getAttribute('data-pay'), b); }; });
+  main.querySelectorAll('[data-pdf]').forEach(function (b) { b.onclick = function () {
+    var w = window.open('', '_blank'); b.disabled = true;
+    rpc('invoice_links', { p_token: TOKEN, p_session: SESSION || null, p_invoice: b.getAttribute('data-pdf') }).then(function (r) {
+      b.disabled = false;
+      if (r.status === 'ok' && r.view_url) { if (w) w.location = r.view_url; else location.href = r.view_url; } else { if (w) w.close(); alert('The PDF is not available right now.'); }
+    });
+  }; });
+}
+
+/* ---------- Statement (Pandora statement layout, printable) ---------- */
+function statementView() {
+  document.body.classList.add('stmt-mode');
+  var st = DATA.statement, s = DATA.summary;
+  var h = '<section id="statementView"><p class="screen-only"><button class="btn ghost small" id="back">&larr; My account</button> <button class="btn gold small" id="print">Print / Save as PDF</button></p>' +
+    '<div id="stmt"><div class="sh"><div style="font-weight:700;letter-spacing:2px;font-size:18px">BAROCCO WHOLESALE</div><div style="font-size:11px;color:#cfc7b3">Pandora International LLC dba Barocco &middot; 1326 Santee Street, Los Angeles, CA 90015</div></div><div class="sb">' +
+    '<div class="row" style="margin-top:0"><div><div class="muted">STATEMENT FOR</div><b style="font-size:17px">' + esc(DATA.customer.name) + '</b><div class="muted">' + esc(DATA.customer.code) + '</div></div><div style="text-align:right"><div class="muted">STATEMENT DATE</div><b>' + dt(String(DATA.as_of).slice(0, 10)) + '</b></div></div>' +
+    '<h3 style="margin:18px 0 6px">Open invoices</h3>' +
+    (DATA.invoices.length ? '<table><thead><tr><th>Invoice</th><th>Date</th><th>Due</th><th class="n">Amount</th><th class="n">Paid</th><th class="n">Balance</th></tr></thead><tbody>' + DATA.invoices.map(function (i) { return '<tr><td>' + esc(i.invoice_number) + (i.is_factored ? ' *' : '') + '</td><td>' + dt(i.invoice_date) + '</td><td>' + dt(i.due_date) + '</td><td class="n">' + money(i.original_amount) + '</td><td class="n">' + money(i.amount_paid) + '</td><td class="n">' + money(i.balance_due) + '</td></tr>'; }).join('') +
+      '<tr><td colspan="5" class="n"><b>Total open invoices</b></td><td class="n"><b>' + money(s.open_balance) + '</b></td></tr></tbody></table>' : '<p>No open invoices.</p>') +
+    (Math.abs(st.unapplied_credits || 0) > 0.004 ? '<p class="muted">Credits and adjustments on account not yet applied to an invoice: ' + money(st.unapplied_credits) + '. Balance after credits: <b>' + money(st.closing_balance) + '</b>.</p>' : '') +
+    (DATA.invoices.some(function (i) { return i.is_factored; }) ? '<p class="muted">* Pay these invoices to our factor, not to Barocco: ' + esc((DATA.invoices.filter(function (i) { return i.is_factored && i.remit; })[0] || { remit: { payee: '' } }).remit.payee) + ', ' + ((DATA.invoices.filter(function (i) { return i.is_factored && i.remit; })[0] || { remit: { lines: [] } }).remit.lines || []).map(esc).join(', ') + '</p>' : '') +
+    '<h3 style="margin:18px 0 6px">Account activity since ' + dt(st.from) + '</h3>' +
+    '<table><thead><tr><th>Date</th><th>Description</th><th class="n">Charges / credits</th><th class="n">Balance</th></tr></thead><tbody><tr><td colspan="3">Balance brought forward</td><td class="n">' + money(st.opening_balance) + '</td></tr>' +
+    (st.rows || []).map(function (r) { return '<tr><td>' + dt(r.date) + '</td><td>' + esc(r.description || '') + '</td><td class="n">' + money(r.amount) + '</td><td class="n">' + money(r.balance) + '</td></tr>'; }).join('') + '</tbody></table>' +
+    '<div class="row"><b>Aging</b><span class="muted">Not due ' + money((s.aging || {}).not_due) + ' &middot; 1-30 ' + money((s.aging || {}).d1_30) + ' &middot; 31-60 ' + money((s.aging || {}).d31_60) + ' &middot; 61-90 ' + money((s.aging || {}).d61_90) + ' &middot; 90+ ' + money((s.aging || {}).d90_plus) + '</span></div>' +
+    '<p class="muted" style="margin-top:14px">' + esc(DATA.remit_house) + ' Pay online any time at your secure Barocco link.</p></div></div></section>';
+  setMain(h);
+  document.getElementById('back').onclick = function () { show('account'); };
+  document.getElementById('print').onclick = function () { window.print(); };
+}
+
+start();
+})();
+</script>
+</body>
+</html>
