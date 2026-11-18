@@ -116,6 +116,7 @@ function msg(title, text) { tabsEl.classList.add('hide'); setMain(card('', '<h3 
 
 /* ---------- start ---------- */
 function start() {
+  try { if (TOKEN) sessionStorage.setItem('bw_last_a', TOKEN); } catch (e) {}
   if (!TOKEN) { msg('This link is not complete', 'Please use the secure link from your Barocco email or message, or contact your representative.'); return; }
   rpc('open', { p_token: TOKEN, p_session: SESSION || null }).then(function (o) {
     OPEN = o;
@@ -217,7 +218,7 @@ function startInvoicePay(inv, btn) {
 // Same JSON conversation the original pay page has with the `pay` function.
 function payFlow(payToken) {
   setMain(card('', 'Loading&hellip;'));
-  fetch(PAY_FN + '?t=' + encodeURIComponent(payToken), { headers: { 'Accept': 'application/json' } })
+  fetch(PAY_FN + '?ret=bw&t=' + encodeURIComponent(payToken), { headers: { 'Accept': 'application/json' } })
     .then(function (r) { return r.json(); })
     .then(function (d) { handlePay(d, payToken); })
     .catch(function () { setMain(card('', '<span class="err">Something went wrong. Please try again.</span>')); });
@@ -251,7 +252,7 @@ function amountForm(d, payToken) {
     var a = parseFloat(document.getElementById('amt').value);
     if (!a || a <= 0) { alert('Enter a valid amount'); return; }
     this.disabled = true;
-    fetch(PAY_FN + '?t=' + encodeURIComponent(payToken), { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: a }) })
+    fetch(PAY_FN + '?ret=bw&t=' + encodeURIComponent(payToken), { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: a }) })
       .then(function (r) { return r.json(); }).then(function (x) { handlePay(x, payToken); })
       .catch(function () { setMain(card('', '<span class="err">Something went wrong. Please try again.</span>')); });
   };

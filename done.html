@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Barocco Wholesale – Thank you</title>
+<link rel="icon" href="invoice-logo.png">
+<style>
+:root{--ink:#111111;--gold:#B4934C;--pale:#F5F0E5;--gray:#F4F4F2;--line:#e7e2d6}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--gray);color:var(--ink);font-size:15px;line-height:1.45}
+.rail{height:6px;background:var(--ink)}
+header{background:var(--ink);border-bottom:4px solid var(--gold);padding:14px 16px;display:flex;align-items:center;gap:12px}
+header img{height:38px;background:#fff;border-radius:6px;padding:2px 4px}
+.brand{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:16px;text-transform:uppercase}
+.sub{color:#cfc7b3;font-size:11px;margin-top:2px}
+main{max-width:560px;margin:0 auto;padding:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 18px;text-align:center}
+h1{font-size:20px;margin:0 0 8px}
+.btn{display:inline-block;margin-top:16px;padding:13px 18px;border-radius:8px;background:var(--gold);color:#111;font-weight:700;text-decoration:none}
+.muted{color:#777;font-size:12px;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="rail"></div>
+<header><img src="invoice-logo.png" alt="Barocco"><div><div class="brand">Barocco Wholesale</div><div class="sub">Pandora International LLC dba Barocco &middot; 1326 Santee Street, Los Angeles, CA 90015</div></div></header>
+<main>
+  <div class="card">
+    <h1>Thank you</h1>
+    <p>Your request was received by our secure payment partner. Payments appear on your account within a few minutes and you will get a receipt by email.</p>
+    <a class="btn" id="back" href="./" style="display:none">Back to my account</a>
+    <p class="muted">You can close this window.</p>
+  </div>
+</main>
+<script>
+try {
+  var a = sessionStorage.getItem('bw_last_a');
+  if (a) { var b = document.getElementById('back'); b.href = './?a=' + encodeURIComponent(a) + '#account'; b.style.display = 'inline-block'; }
+} catch (e) {}
+</script>
+</body>
+</html>
